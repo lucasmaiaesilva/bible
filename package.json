@@ -1,5 +1,5 @@
 {
-  "name": "Bible App",
+  "name": "BibleApp",
   "version": "1.0.0",
   "description": "A simple bible front made with react and bible-api",
   "main": "index.js",
