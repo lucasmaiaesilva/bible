@@ -1,5 +1,5 @@
 var gulp 		= require('gulp'),
-	react	= require('gulp-react'),
+	react		= require('gulp-react'),
 	plumber		= require('gulp-plumber'),
 	koutoSwiss	= require('kouto-swiss'),
 	prefixer	= require('autoprefixer-stylus'),
@@ -91,10 +91,10 @@ gulp.task('watch', function () {
 });
 
 // just run gulp deploy-pages to send build files to gh-pages
-//gulp.task('deploy-pages', function () {
-  //return gulp.src("build/**/*")
-    //.pipe(deploy());
-//});
+gulp.task('deploy-pages', function () {
+	return gulp.src("build/**/*")
+	.pipe(deploy());
+});
 
 // Olhar na documentação como usar o módulo deploy-pages
 
