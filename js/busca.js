@@ -26,10 +26,10 @@ var Busca = React.createClass({displayName: "Busca",
 							React.createElement("input", {type: "button", onClick: this.sendData, value: "buscar"})
 						)
 					), 
-					React.createElement("p", null, "livro/capitulo/versiculo"), 
+					React.createElement("p", null, "livro/capitulo/versiculo / ex: salmos/23/1-5"), 
 					React.createElement("p", null, "busca por: ", this.state.searchString)
 				), 
-				React.createElement(MostrarPassagem, {urlBase: urlBase, urlSufix: this.state.searchString})
+				React.createElement(MostrarPassagem, {urlBase: urlBase, urlSufix: this.state.searchString.toLowerCase()})
 			)
 		);
 	}
