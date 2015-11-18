@@ -1,22 +1,30 @@
 var MostrarPassagem = React.createClass({
 	getInitialState: function() {
-		return {data: []};
+		return {
+			data: [],
+			url: this.props.urlSufix
+		};
 	},
-	 loadCommentsFromServer: function() {
+	componentWillReceiveProps: function(nextProps) {
+		if(this.state.url !== nextProps.urlSufix){
+			this.loadTextsFromServer(nextProps.urlSufix);
+		}
+	},
+	loadTextsFromServer: function(url) {
 		$.ajax({
-			url: this.props.urlBase+this.props.urlSufix,
+			url: this.props.urlBase+url,
 			dataType: 'json',
 			cache: false,
 			success: function(data) {
 				this.setState({data: data.text});
 			}.bind(this),
 			error: function(xhr, status, err) {
-				console.error(this.props.url, status, err.toString());
+				console.error(this.props.urlBase, status, err.toString());
 			}.bind(this)
 		});
 	},
 	componentDidMount: function() {
-		this.loadCommentsFromServer();
+		this.loadTextsFromServer(this.state.url);
 	},
 	render: function() {
 		return (
@@ -26,8 +34,3 @@ var MostrarPassagem = React.createClass({
 		);
 	}
 });
-
-ReactDOM.render(
-	<MostrarPassagem urlBase={urlBase} urlSufix={urlSufix} />,
-	document.getElementById("passagem")
-);

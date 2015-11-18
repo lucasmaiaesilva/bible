@@ -1,26 +1,35 @@
 var Busca = React.createClass({
+	getInitialState: function(){
+		return {
+			query: 'joao/3/16',
+			searchString: 'joao/3/16'
+		};
+	},
+	sendData: function(){
+		this.replaceState({searchString: this.state.query});
+	},
+	handleChange: function(e) {
+		this.setState( { query: e.target.value } );
+	},
 	render: function(){
+		var urlBase = 'https://mysterious-ridge-5762.herokuapp.com/';
 		return (
-			<header>
-				<form action="" className="content">
-					<input type="search" placeholder="Digite o texto que você está procurando" />
-					<input type="submit" value="buscar" />
-					<p>Ex:Joao 3:16</p>
-				</form>
-			</header>
-
+			<div>
+				<header>
+					
+						<input type="search" value={this.state.query} onChange={this.handleChange} />
+						<input type="button" onClick={this.sendData} value="buscar" />
+						<p>buscando por {this.state.query}</p>
+						<p>livro/capitulo/versiculo {this.state.searchString}</p>
+					
+				</header>
+				<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString} />
+			</div>
 		);
 	}
 });
 
-// var url = document.URL;
-var urlBase = 'https://mysterious-ridge-5762.herokuapp.com/';
-var urlSufix = 'salmos/23/1-4';
-
 ReactDOM.render(
-	<div>
-		<Busca />
-		<MostrarPassagem urlBase={urlBase} urlSufix={urlSufix} />
-	</div>,
+	<Busca />,
 	document.getElementById("content")
 );
