@@ -21,11 +21,13 @@ var Busca = React.createClass({
 			<div>
 				<header>
 					<form onSubmit={this.handleSubmit}>
-						<input type="search" value={this.state.query} onChange={this.handleChange} />
-						<input type="button" onClick={this.sendData} value="buscar" />
-						<p>livro/capitulo/versiculo</p> 
-						<p>ex: {this.state.searchString}</p>
+						<label>
+							<input type="search" value={this.state.query} onChange={this.handleChange} placeholder="Busque aqui" required />
+							<input type="button" onClick={this.sendData} value="buscar" />
+						</label>
 					</form>
+					<p>livro/capitulo/versiculo</p> 
+					<p>busca por: {this.state.searchString}</p>
 				</header>
 				<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString} />
 			</div>
