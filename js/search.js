@@ -1,4 +1,4 @@
-var SearchExample = React.createClass({
+var SearchExample = React.createClass({displayName: "SearchExample",
 
 	getInitialState: function(){
 		return { searchString: '' };
@@ -20,20 +20,20 @@ var SearchExample = React.createClass({
 		}
 
 		var librariesList = libraries.map(function( lib ) {
-			return <li>{lib.name} <a href={lib.url} title={lib.name}>{lib.url}</a></li>;
+			return React.createElement("li", null, lib.name, " ", React.createElement("a", {href: lib.url, title: lib.name}, lib.url));
 		});
 
 		return (
-			<div>
-				<input type="text"
-					   value={this.state.searchString}
-					   onChange={this.handleChange}
-					   placeholder="Digite uma library aqui" />
+			React.createElement("div", null, 
+				React.createElement("input", {type: "text", 
+					   value: this.state.searchString, 
+					   onChange: this.handleChange, 
+					   placeholder: "Digite uma library aqui"}), 
 
-				<ul>
-					{librariesList}
-				</ul>
-			</div>
+				React.createElement("ul", null, 
+					librariesList
+				)
+			)
 		);
 
 	}
@@ -56,4 +56,4 @@ var libraries = [
 	{ name: 'Koa', url: 'http://koajs.com/'},
 ];
 
-ReactDOM.render(<SearchExample items={libraries}/>, document.getElementById("content"));
+ReactDOM.render(React.createElement(SearchExample, {items: libraries}), document.getElementById("content"));

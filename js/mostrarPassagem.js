@@ -1,4 +1,4 @@
-var MostrarPassagem = React.createClass({
+var MostrarPassagem = React.createClass({displayName: "MostrarPassagem",
 	getInitialState: function() {
 		return {
 			data: [],
@@ -29,9 +29,9 @@ var MostrarPassagem = React.createClass({
 	},
 	render: function() {
 		return (
-			<section id="passagem" className="text">
-				<p> {this.state.data} </p>
-			</section>
+			React.createElement("section", {id: "passagem", className: "text"}, 
+				React.createElement("p", null, " ", this.state.data, " ")
+			)
 		);
 	}
 });
