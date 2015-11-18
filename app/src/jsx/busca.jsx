@@ -11,17 +11,21 @@ var Busca = React.createClass({
 	handleChange: function(e) {
 		this.setState( { query: e.target.value } );
 	},
+	handleSubmit: function(e){
+		e.preventDefault();
+		this.sendData();
+	},
 	render: function(){
 		var urlBase = 'https://mysterious-ridge-5762.herokuapp.com/';
 		return (
 			<div>
 				<header>
-					
+					<form onSubmit={this.handleSubmit}>
 						<input type="search" value={this.state.query} onChange={this.handleChange} />
 						<input type="button" onClick={this.sendData} value="buscar" />
-						<p>buscando por {this.state.query}</p>
-						<p>livro/capitulo/versiculo {this.state.searchString}</p>
-					
+						<p>livro/capitulo/versiculo</p> 
+						<p>ex: {this.state.searchString}</p>
+					</form>
 				</header>
 				<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString} />
 			</div>

@@ -8,6 +8,7 @@ var MostrarPassagem = React.createClass({
 	componentWillReceiveProps: function(nextProps) {
 		if(this.state.url !== nextProps.urlSufix){
 			this.loadTextsFromServer(nextProps.urlSufix);
+			this.setState({url: nextProps.urlSufix});
 		}
 	},
 	loadTextsFromServer: function(url) {
