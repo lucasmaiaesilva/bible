@@ -28,12 +28,6 @@ var MostrarPassagem = React.createClass({displayName: "MostrarPassagem",
 		this.loadTextsFromServer(this.state.url);
 	},
 	render: function() {
-		return (
-			React.createElement("section", null, 
-				React.createElement("div", {className: "content text"}, 
-					React.createElement("p", null, this.state.data)
-				)
-			)
-		);
+		return (React.createElement("p", {style: { fontSize: 27}}, this.state.data));
 	}
 });
