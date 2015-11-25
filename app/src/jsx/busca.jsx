@@ -22,7 +22,7 @@ var Busca = React.createClass({
 				<header>
 					<div className="content center">
 						<div className="logo">
-							<img src="/img/logo.svg" alt="" />
+							<img src="img/logo.svg" alt="" />
 							<h1>Bible Search</h1>
 						</div>
 						<form onSubmit={this.handleSubmit}>
@@ -30,8 +30,8 @@ var Busca = React.createClass({
 							<input type="button" onClick={this.sendData} value="ok" />
 						</form>
 						<span className="share">
-							<a href="#"><img src="/img/share/twitter.gif" alt="" /></a>
-							<a href="#"><img src="/img/share/facebook.png" alt="" /></a>
+							<a href="#"><img src="img/share/twitter.gif" alt="" /></a>
+							<a href="#"><img src="img/share/facebook.png" alt="" /></a>
 						</span>
 					</div>
 				</header>
