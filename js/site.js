@@ -36,9 +36,9 @@ var Site = React.createClass({displayName: "Site",
 					)
 				), 
 				React.createElement("section", null, 
-					React.createElement("div", {className: "content text", style: { justifyContent: 'center', flex: 1}}, 
-						React.createElement(MostrarPassagem, {urlBase: urlBase, urlSufix: this.state.searchString.toLowerCase(), queryString: this.state.searchString})
-					)
+					
+					React.createElement(MostrarPassagem, {urlBase: urlBase, urlSufix: this.state.searchString.toLowerCase(), queryString: this.state.searchString})
+					
 				)
 			)
 		);
