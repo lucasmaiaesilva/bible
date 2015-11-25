@@ -22,7 +22,7 @@ var Busca = React.createClass({displayName: "Busca",
 				React.createElement("header", null, 
 					React.createElement("div", {className: "content center"}, 
 						React.createElement("div", {className: "logo"}, 
-							React.createElement("img", {src: "/img/logo.svg", alt: ""}), 
+							React.createElement("img", {src: "img/logo.svg", alt: ""}), 
 							React.createElement("h1", null, "Bible Search")
 						), 
 						React.createElement("form", {onSubmit: this.handleSubmit}, 
@@ -30,8 +30,8 @@ var Busca = React.createClass({displayName: "Busca",
 							React.createElement("input", {type: "button", onClick: this.sendData, value: "ok"})
 						), 
 						React.createElement("span", {className: "share"}, 
-							React.createElement("a", {href: "#"}, React.createElement("img", {src: "/img/share/twitter.gif", alt: ""})), 
-							React.createElement("a", {href: "#"}, React.createElement("img", {src: "/img/share/facebook.png", alt: ""}))
+							React.createElement("a", {href: "#"}, React.createElement("img", {src: "img/share/twitter.gif", alt: ""})), 
+							React.createElement("a", {href: "#"}, React.createElement("img", {src: "img/share/facebook.png", alt: ""}))
 						)
 					)
 				), 
