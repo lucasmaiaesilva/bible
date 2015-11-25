@@ -6,75 +6,118 @@ html
         background #d04c3f
         color #fff
 body
-	background rgba(149,165,166,0.4)
-	color #404d5b
+	min-height 100%
+	position relative
+	padding-bottom 90px
+	background #f8f4ec url('/img/beige-bg.jpg') repeat
 	font-family 'Raleway', Helvetica, sans-serif
-	font-size 16px
-	font-weight 300
-	letter-spacing 8px
-     
-h1
-    text-align center
-    
+	
+.content
+	center(900px)
+	+below(bp)
+		center(90%)
+	
+.center
+	text-align center
+
 header
 	background #b96948
-	text-align center
-	padding-top 50px
-	padding-bottom 20px
-	p
-		color #e9d8ba
-		font-size rem(18px)
-		font-family 'Raleway'
-		+below(bp)
-			font-size rem(24px)
+	border-top solid 10px #5d4e48
+	padding 20px
+	+below(bp)
+		border-top solid 20px #5d4e48
 	form
-		label
-			center(700px)
-			+below(bp)
-				center(90%)
-		input[type="search"]
-			font-size rem(24px)
-			color #fff
-			background none
-			outline none
-			border none
-			border-bottom 1px solid rgba(0,0,0,.2)
-			margin 0
-			padding 8px 0
-			col(9/12)
-			+below(bp)
-				stack()
-				margin-top 20px
-				font-size rem(30px)
-			&:focus
-				cursor text
-			&:focus:hover
-				border-bottom 1px solid #bbb
-		input[type="button"]
-			margin 0
-			float right
-			outline none
-			border none
-			background #e9d8ba
-			font-size rem(26px)
-			padding 8px 10px
-			col(3/12)
-			+below(bp)
-				margin 30px 0
-				padding 30px 0
-				font-size rem(26px)
-				stack()
+		stack()
+		margin 15px 0
 
-section.text
-	p
-		padding 20px
-		font-size rem(28px)
-		line-height 1.518
-		font-weight 300
-		center(900px)
+	input[type="search"]
+		background #fff
+		font-family Helvetica, Arial, sans-serif
+		color #555
+		letter-spacing 2px
+		outline none
+		border none
+		border-box()
+		border-radius(5px)
+		width 40%
+		font-size 24px
+		padding 7px 20px
 		+below(bp)
-			center(90%)
+			width 80%
+			font-size 3em
+			padding 20px
+		+placeholder()
+			font-weight 100
+			color #ccc
+	input[type="button"]
+		background #D7B883
+		color #5d4e48
+		position relative
+		left -7px
+		font-size 24px
+		padding 6px 20px 7px 20px
+		border none
+		outline none
+		+below(bp)
+			font-size 3em
+			padding 20px
+			left -6
+
+	.logo
+		center(30%)
+		+below(bp)
+			center(80%)
+			margin-bottom 30px
+		img
+			col(3/12)
+			padding-top 12px
+			height 50px
+			+below(bp)
+				height 130px
+				
+		h1
+			col(9/12)
+			display inline-block
+			color #fff
 			padding 0
-			margin-top 30px
-			font-size rem(30px)
-	
+			font-size 2em
+			+below(bp)
+				font-size 4em
+section
+	h2.title
+		text-align center
+	.text
+		margin-top 20px
+		color #5a5a5a
+		font-size 22px
+		line-height 35px
+		p::first-letter
+			font-size 65px
+			color #9b0202
+
+.pulse
+	position absolute
+	top -2
+	right -25px
+	-webkit-animation pulse .8s alternate linear infinite
+	+below(bp)
+		display none
+		position relative
+
+footer
+	background #3c3c3c
+	position fixed
+	bottom 0
+	right 0
+	left 0
+	padding 1rem
+	height 50px
+	font-size 16px
+	+below(bp)
+		position relative
+		font-size 28px
+		padding 50px 0
+		margin-bottom -90px
+footer > div
+	align(both)
+	color #fff

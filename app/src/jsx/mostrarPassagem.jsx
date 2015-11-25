@@ -29,8 +29,10 @@ var MostrarPassagem = React.createClass({
 	},
 	render: function() {
 		return (
-			<section id="passagem" className="text">
-				<p> {this.state.data} </p>
+			<section>
+				<div className="content text">
+					<p>{this.state.data}</p>
+				</div>
 			</section>
 		);
 	}

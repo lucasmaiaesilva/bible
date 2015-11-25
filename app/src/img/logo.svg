@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="158px" height="184px" viewBox="0 0 158 184" enable-background="new 0 0 158 184" xml:space="preserve">
+<rect id="capa" x="24" y="5" fill="#D7B883" width="134" height="179"/>
+<rect id="suporte" y="5" fill="#5A3722" width="28" height="179"/>
+<g id="icon-search">
+	<g>
+		<g>
+			<polygon fill="#FFFFFF" stroke="#5A3722" stroke-width="0.25" stroke-miterlimit="10" points="46.006,123.249 72.468,99.212 
+				84.084,112.048 57.622,136.085 46.006,123.249 			"/>
+		</g>
+	</g>
+	<g>
+		<path fill="#FFFFFF" stroke="#5A3722" stroke-width="0.25" stroke-miterlimit="10" d="M101.776,53.347
+			c3.196,0,6.448,0.524,9.639,1.628c15.386,5.324,23.543,22.113,18.22,37.498c-4.218,12.194-15.64,19.848-27.857,19.848
+			c-3.196,0-6.45-0.526-9.642-1.63c-15.385-5.323-23.543-22.112-18.218-37.497C78.138,61,89.559,53.347,101.776,53.347
+			 M101.776,61.338c-9.151,0-17.313,5.814-20.306,14.468c-1.878,5.425-1.529,11.256,0.978,16.417
+			c2.509,5.163,6.877,9.04,12.303,10.917c2.28,0.789,4.644,1.19,7.027,1.19c9.151,0,17.311-5.815,20.305-14.472
+			c1.877-5.422,1.528-11.254-0.978-16.415c-2.511-5.163-6.879-9.041-12.302-10.917l-0.002-0.001
+			C106.524,61.737,104.159,61.338,101.776,61.338L101.776,61.338z"/>
+	</g>
+</g>
+<g id="marcador">
+	<polygon fill="#B20909" points="122,23 122,36.899 134.292,23 	"/>
+	<polygon fill="#B20909" points="146,23 146,36.899 133.587,23 	"/>
+	<rect x="122" fill="#B20909" width="24" height="23"/>
+</g>
+</svg>

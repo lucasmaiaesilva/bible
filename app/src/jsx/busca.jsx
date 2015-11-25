@@ -20,16 +20,22 @@ var Busca = React.createClass({
 		return (
 			<div>
 				<header>
-					<form onSubmit={this.handleSubmit}>
-						<label>
-							<input type="search" value={this.state.query} onChange={this.handleChange} placeholder="Busque aqui" required />
-							<input type="button" onClick={this.sendData} value="buscar" />
-						</label>
-					</form>
-					<p>livro/capitulo/versiculo / ex: salmos/23/1-5</p> 
-					<p>busca por: {this.state.searchString}</p>
+					<div className="content center">
+						<div className="logo">
+							<img src="/img/logo.svg" alt="" />
+							<h1>Bible Search</h1>
+						</div>
+						<form onSubmit={this.handleSubmit}>
+							<input type="search" value={this.state.query} onChange={this.handleChange} placeholder="..." required />
+							<input type="button" onClick={this.sendData} value="ok" />
+						</form>
+						<span className="share">
+							<a href="#"><img src="/img/share/twitter.gif" alt="" /></a>
+							<a href="#"><img src="/img/share/facebook.png" alt="" /></a>
+						</span>
+					</div>
 				</header>
-				<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString.toLowerCase()} />
+				<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString.toLowerCase()} queryString={this.state.searchString} />
 			</div>
 		);
 	}
