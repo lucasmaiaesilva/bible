@@ -30,7 +30,7 @@ var MostrarPassagem = React.createClass({displayName: "MostrarPassagem",
 	render: function() {
 		return (
 			React.createElement("div", {className: "content text", allowFontScaling: false, style: { justifyContent: 'center', flex: 1}}, 
-				React.createElement("p", {style: { fontSize: 34}}, this.state.data)
+				React.createElement("p", {style: { fontSize: 30}}, this.state.data)
 			)
 		);
 	}		
