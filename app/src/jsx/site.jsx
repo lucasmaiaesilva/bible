@@ -36,9 +36,9 @@ var Site = React.createClass({
 					</div>
 				</header>
 				<section>
-					<div className="content text" style={{ justifyContent: 'center', flex: 1 }}>
-						<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString.toLowerCase()} queryString={this.state.searchString} />
-					</div>
+					
+					<MostrarPassagem urlBase={urlBase} urlSufix={this.state.searchString.toLowerCase()} queryString={this.state.searchString} />
+					
 				</section>
 			</div>
 		);
