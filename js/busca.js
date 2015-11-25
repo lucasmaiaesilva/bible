@@ -1,8 +1,8 @@
 var Busca = React.createClass({displayName: "Busca",
 	getInitialState: function(){
 		return {
-			query: 'joao/3/16',
-			searchString: 'joao/3/16'
+			query: 'salmos/23/1-5',
+			searchString: 'salmos/23/1-5'
 		};
 	},
 	sendData: function(){
