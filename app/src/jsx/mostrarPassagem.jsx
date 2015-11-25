@@ -30,7 +30,7 @@ var MostrarPassagem = React.createClass({
 	render: function() {
 		return (
 			<div className="content text" allowFontScaling={false} style={{ justifyContent: 'center', flex: 1 }}>
-				<p style={{ fontSize: 27 }}>{this.state.data}</p>
+				<p style={{ fontSize: 34 }}>{this.state.data}</p>
 			</div>
 		);
 	}		
