@@ -28,12 +28,6 @@ var MostrarPassagem = React.createClass({
 		this.loadTextsFromServer(this.state.url);
 	},
 	render: function() {
-		return (
-			<section>
-				<div className="content text">
-					<p>{this.state.data}</p>
-				</div>
-			</section>
-		);
+		return (<p style={{ fontSize: 27 }}>{this.state.data}</p>);
 	}
 });
